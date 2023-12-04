@@ -10,10 +10,10 @@ mongoose.connect('mongodb+srv://myapp1:X0zpIn5YLCtxHMpP@cluster0.8vpkagh.mongodb
 
 app.get('/users',user.list)
 app.post('/users',user.create)
-app.get('/users:id', user.get)
-app.put('/users:id', user.update)
-app.patch('/users:id',user.update)
-app.delete('/users:id',user.destroy)
+app.get('/users/:id', user.get);
+app.put('/users/:id', user.update);
+app.patch('/users/:id', user.update);
+app.delete('/users/:id', user.destroy);
 
 
 app.use(express.static('app'))

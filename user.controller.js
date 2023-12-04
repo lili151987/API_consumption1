@@ -28,7 +28,7 @@ const User = {
         const {id} = req.params
         const user = await Users.findOne({ _id: id})
         if (user){
-            user.remove
+            await user.remove()
         }
         res.sendStatus(204)
     }

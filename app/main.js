@@ -20,7 +20,7 @@ const loadInitialTemplate = () => {
 }
 
 const getUsers = async() => {
-    const response = await fetch('/users')
+    const response = await fetch('/users/')
     const users = await response.json()
     const template = user =>`
     <li>
